@@ -1,0 +1,7 @@
+---
+prometheus_node_exporter_packages:
+  - prometheus-node-exporter
+  - prometheus-node-exporter-collectors
+  - smartmontools
+prometheus_node_exporter_env_file: /etc/default/prometheus-node-exporter
+prometheus_node_exporter_service_name: prometheus-node-exporter

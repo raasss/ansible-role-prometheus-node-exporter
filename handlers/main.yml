@@ -1,0 +1,12 @@
+---
+- name: restart prometheus-node-exporter
+  service:
+    name: "{{ prometheus_node_exporter_service_name }}"
+    state: restarted
+  ignore_errors: "{{ ansible_check_mode }}"
+
+- name: reload prometheus-node-exporter
+  service:
+    name: "{{ prometheus_node_exporter_service_name }}"
+    state: reloaded
+  ignore_errors: "{{ ansible_check_mode }}"
